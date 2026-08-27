@@ -15,10 +15,10 @@ Emmad Ismail · Nico Pschipsch · Douglas W. Cunningham
 
 The deep learning model's advantage is **not uniform** across conditions, as originally hypothesised. It is concentrated in a specific, well-defined failure mode of the classical approach:
 
-| Condition | Classical (OpenCV) | Deep learning (ResNet18) | Advantage |
-|---|---|---|---|
-| 3D objects, oblique angle | 34.5% | 66.4% | **+31.9 pp** |
-| Flat 2D shapes | 56.0% | 54.9% | ≈ 0 (near-identical) |
+| Condition                 | Classical (OpenCV) | Deep learning (ResNet18) | Advantage            |
+| ------------------------- | ------------------ | ------------------------ | -------------------- |
+| 3D objects, oblique angle | 34.5%              | 66.4%                    | **+31.9 pp**         |
+| Flat 2D shapes            | 56.0%              | 54.9%                    | ≈ 0 (near-identical) |
 
 When the classical method's core geometric assumptions hold — flat 2D shapes — the two approaches perform almost identically. The advantage appears specifically where those assumptions break down: a cube viewed obliquely presents 5–6+ outline vertices rather than 4, so vertex-counting cannot succeed regardless of image quality. This is a structural limitation, not a tuning problem.
 
@@ -44,10 +44,10 @@ Both were confirmed — the second more precisely than predicted.
 
 ## Full results
 
-| Metric | Value | Notes |
-|---|---|---|
-| ResNet — validation accuracy | 98.6% | Transfer learning cleanly separates the 3 shape classes |
-| Track A — real-world counting efficiency | 61.28% | Original paper reported 90.206% on clean, cropped images |
+| Metric                                       | Value         | Notes                                                              |
+| -------------------------------------------- | ------------- | ------------------------------------------------------------------ |
+| ResNet — validation accuracy                 | 98.6%         | Transfer learning cleanly separates the 3 shape classes            |
+| Track A — real-world counting efficiency     | 61.28%        | Original paper reported 90.206% on clean, cropped images           |
 | Track A vs Track B — classification accuracy | 48.1% / 59.1% | ResNet ahead overall, but the gap is not uniform (see Key finding) |
 
 The drop from 90.206% to 61.28% is expected and informative: the original paper evaluated on clean, cropped, well-separated images, while this test set uses real, cluttered room photographs.
@@ -191,9 +191,9 @@ Computer vision pipeline design, transfer learning, systematic debugging and roo
 
 ## References
 
-1. Abdulhamid, M., Odondi, O., & Al-Rawi, M. (2020). *Computer vision based on Raspberry Pi system.* Applied Computer Science, 16(4), 85–102.
-2. He, K., Zhang, X., Ren, S., & Sun, J. (2016). *Deep residual learning for image recognition.* Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 770–778.
-3. Piyasamara, D. *Geometric Shapes Dataset.* Kaggle. https://www.kaggle.com/datasets/dineshpiyasamara/geometric-shapes-dataset
+1. Abdulhamid, M., Odondi, O., & Al-Rawi, M. (2020). _Computer vision based on Raspberry Pi system._ Applied Computer Science, 16(4), 85–102.
+2. He, K., Zhang, X., Ren, S., & Sun, J. (2016). _Deep residual learning for image recognition._ Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 770–778.
+3. Piyasamara, D. _Geometric Shapes Dataset._ Kaggle. https://www.kaggle.com/datasets/dineshpiyasamara/geometric-shapes-dataset
 
 ## License
 
@@ -201,4 +201,4 @@ See [LICENSE](LICENSE).
 
 ## Contact
 
-emmad@b-tu.de
+emmadismail1@gmail.com
